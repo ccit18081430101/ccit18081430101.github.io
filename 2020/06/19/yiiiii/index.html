@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://ccit18081430101.github.io/images/h.png">
 <meta property="og:image" content="https://ccit18081430101.github.io/images/i.png">
 <meta property="article:published_time" content="2020-06-19T05:16:39.000Z">
-<meta property="article:modified_time" content="2020-06-19T06:05:42.882Z">
+<meta property="article:modified_time" content="2020-06-19T06:24:14.855Z">
 <meta property="article:author" content="5Wuy">
 <meta property="article:tag" content="宝藏">
 <meta name="twitter:card" content="summary">
@@ -82,7 +82,7 @@
 			</ul>
 		</nav>
 <nav>
-    总文章数 6
+    总文章数 7
 </nav>
 
 		<nav class="header-smart-menu">
@@ -252,7 +252,7 @@
         <h1 id="micro-bit——LED服务和其任意的两个特性"><a href="#micro-bit——LED服务和其任意的两个特性" class="headerlink" title="micro bit——LED服务和其任意的两个特性"></a>micro bit——LED服务和其任意的两个特性</h1><a id="more"></a>
 
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="一-查找LED服务及其特性的uuid号"><a href="#一-查找LED服务及其特性的uuid号" class="headerlink" title="一. 查找LED服务及其特性的uuid号"></a>一. 查找LED服务及其特性的uuid号</h3><p><a href="https://lancaster-university.github.io/microbit-docs/resources/bluetooth/bluetooth_profile.html" target="_blank" rel="noopener">点击此处</a>去查找LED服务及其特性的uuid号<img src="/images/f.png" alt="f"></p>
-<h3 id="二、启动chrome的蓝牙插件，查看是否有LED服务"><a href="#二、启动chrome的蓝牙插件，查看是否有LED服务" class="headerlink" title="二、启动chrome的蓝牙插件，查看是否有LED服务"></a>二、启动chrome的蓝牙插件，查看是否有LED服务</h3><p>在chrome中输入 <em><a href="chrome://bluetooth-internals">chrome://bluetooth-internals</a></em> ,点击右上方的<strong>Start Scan</strong>按钮,找到自己的BBC板[tituv]连接，连接成功后就可以看到实验板的多个服务<img src="/images/g.png" alt="f"></p>
+<h3 id="二、启动chrome的蓝牙插件，查看是否有LED服务"><a href="#二、启动chrome的蓝牙插件，查看是否有LED服务" class="headerlink" title="二、启动chrome的蓝牙插件，查看是否有LED服务"></a>二、启动chrome的蓝牙插件，查看是否有LED服务</h3><p>在chrome中输入 <em>chrome://bluetooth-internals</em> ,点击右上方的<strong>Start Scan</strong>按钮,找到自己的BBC板[tituv]连接，连接成功后就可以看到实验板的多个服务<img src="/images/g.png" alt="f"></p>
 <p>由图所示，服务中有LED的服务，我们可以直接去用Visual Studio Code去编写源代码了</p>
 <h3 id="三-编写代码"><a href="#三-编写代码" class="headerlink" title="三. 编写代码"></a>三. 编写代码</h3><p>在<strong>script</strong>中添加标志性的变量，用来判断服务和特性是否被发现，每个服务和特性都要定义这个变量，它只有两种状态，发现为true，反之则为false。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var has_accelerometer_service &#x3D; false; </span><br><span class="line">var has_accelerometer_data &#x3D; false; </span><br><span class="line">var has_led_service &#x3D; false;</span><br><span class="line">var has_led_matrix_state &#x3D; false; </span><br><span class="line">var has_led_text&#x3D;false     &#x2F;&#x2F;新加的led_text特性相关语句</span><br><span class="line">var has_device_information_service &#x3D; false; </span><br><span class="line">var has_model_name_string &#x3D; false;</span><br></pre></td></tr></table></figure>
@@ -392,6 +392,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/06/19/yiiiiii/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          yiiiiii
+        
+      </div>
+    </a>
   
   
     <a href="/2020/06/16/yiiii/" id="article-nav-older" class="article-nav-link-wrap">
